@@ -1,0 +1,15 @@
+ConditionalComment
+==================
+
+A simple plugin for creating IE conditional-comments
+
+
+Example
+=======
+
+conditional_comment :version => 7, :comparison => 'lt' do
+  # code here
+end
+
+
+Copyright (c) 2008 Logan Raarup, released under the MIT license
