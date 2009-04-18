@@ -1,3 +1,1 @@
-# Include hook code here
-require 'conditional_comment'
-ActionView::Base.send :include, ConditionalCommentHelper
+require File.join(File.dirname(__FILE__), 'rails', 'init')
