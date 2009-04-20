@@ -37,7 +37,7 @@ After installation, a helper called `conditional_comment` will automatically be 
 
 In this case, the stylesheet will be shown in all versions of Internet Explorer.
 
-You can limit which versions of Internet Explorer should display the contents of the conditional comment:
+You can limit which versions of Internet Explorer should display the contents of the conditional comment, using the `:version` parameter. This parameter accepts a number, string or symbol using the following syntax: `[not] [less|greater than [or equal to]] [version]`. Here are some examples:
 
 	conditional_comment :version => 7 do
 		stylesheet_link_tag "site/ie.css" # Displayed in IE 7
@@ -51,6 +51,11 @@ You can limit which versions of Internet Explorer should display the contents of
 
 	conditional_comment :version => "greater than or equal to 5" do
 		stylesheet_link_tag "site/ie.css" # Displayed in IE 5 and above
+	end
+
+
+	conditional_comment :version => "not 6" do
+		stylesheet_link_tag "site/ie.css" # Displayed in everything besides IE 6
 	end
 
 
